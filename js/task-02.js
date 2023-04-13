@@ -9,29 +9,14 @@ const ingredients = [
 
 const listEl = document.querySelector('#ingredients');
 
-const firstIngredient = document.createElement('li');
-firstIngredient.classList.add('item');
-firstIngredient.textContent = ingredients[0];
+const ingredientsArray = [];
 
-const secoondIngredient = document.createElement('li');
-secoondIngredient.classList.add('item');
-secoondIngredient.textContent = ingredients[1];
+for(const ingredient of ingredients){
+  const listItem = document.createElement('li');
+  listItem.classList.add('item');
+  listItem.textContent = ingredient;
 
-const thirdIngredient = document.createElement('li');
-thirdIngredient.classList.add('item');
-thirdIngredient.textContent = ingredients[2];
+  ingredientsArray.push(listItem);
+}
 
-const fourthIngredient = document.createElement('li');
-fourthIngredient.classList.add('item');
-fourthIngredient.textContent = ingredients[3];
-
-const fifthIngredient = document.createElement('li');
-fifthIngredient.classList.add('item');
-fifthIngredient.textContent = ingredients[4];
-
-const sixthIngredient = document.createElement('li');
-sixthIngredient.classList.add('item');
-sixthIngredient.textContent = ingredients[5];
-
-
-listEl.append(firstIngredient, secoondIngredient, thirdIngredient, fourthIngredient, fifthIngredient, sixthIngredient);
+listEl.append(...ingredientsArray);
