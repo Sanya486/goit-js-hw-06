@@ -24,6 +24,7 @@ function createBoxes(amount) {
     boxEl.style.backgroundColor = getRandomHexColor(),
     boxEl.style.width = 30 + i * 10 + 'px';
     boxEl.style.height = 30 + i * 10 + 'px';
+    boxEl.classList.add('box')
     refs.divBoxesEl.append(boxEl);
     refs.inputEl.value = '';
   }
