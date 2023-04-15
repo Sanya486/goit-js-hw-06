@@ -11,10 +11,11 @@ function formHandler (event){
         alert('Всі поля мають бути заповнені!');
     }
     else {
-        console.log( {
+        const userData = {
         email: email.value,
         password: password.value,
-    });
+    };
+    console.log(userData);
     refs.formEl.reset();
     }  
 }

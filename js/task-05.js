@@ -6,7 +6,7 @@ const refs = {
 refs.inputEl.addEventListener('input', (event) => {
     refs.spanEl.textContent = event.currentTarget.value;
 
-    if(event.currentTarget.value === ''){
+    if(event.currentTarget.value === ''|| event.currentTarget.value.trim() === ''){
         refs.spanEl.textContent = 'Anonymous';
     };
     
